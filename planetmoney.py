@@ -13,24 +13,29 @@ def makeRequest ():
 
 	return json.loads(response.read())
 
-
+musicArray = []
 jsonOutput = makeRequest()
 
 while jsonOutput["list"].get("story", "") != "":
 	for blogEntry in jsonOutput["list"]["story"]:
 		for listItem in blogEntry["text"]["paragraph"]:
 			if "Music" in listItem.get("$text", ""):
+
+				episodeTitle = blogEntry["title"]["$text"]
 				musicData = listItem["$text"]
 
-				f = open("musicRows.json", "/n", "a")
-				json.dump(musicData, f)
-				f.close()
+				titleAndMusic = ({"episodeTitle": episodeTitle, "musicData": musicData})
+				
+				musicArray.append(titleAndMusic)
+				#print blogEntry["title"]["$text"]
+				#print listItem["$text"]
+				print titleAndMusic
 
-				print listItem["$text"]
-
-	
 	startNum = startNum + 20
 	jsonOutput = makeRequest()
 
+f = open("musicRows.json","w")
+json.dump(musicArray, f)
+f.close()
 
 
