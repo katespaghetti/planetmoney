@@ -1,0 +1,100 @@
+body {
+	background: url(squirrel_v3.png);
+	font-family: "Josefin Slab";
+}
+
+.table {
+ 	opacity: 0.9;
+ 	border: 10px solid #FFEB3B;
+ 	margin-top: 15px;
+ 	border-collapse: separate;
+ 	border-radius: 5px;
+}
+
+ thead {
+ 	font-size: 30px;
+ 	border-color: #FFEB3B;
+ 	background-color: #FFEB3B;
+}
+
+.table>thead>tr>th {
+	border-color: #FFEB3B;
+}
+
+ tbody {
+ 	font-size: 16px;
+ 	border-color: #FFEB3B;
+}
+
+.table>tbody>tr>td {
+	border-color: #FFEB3B;
+}
+
+.table>tbody>.number:nth-child(even) {
+	background-color: #FFF9C4;
+}
+
+.table>tbody>.number:nth-child(odd) {
+	background-color: #FFFDE7;
+}
+
+.description-container {
+ 	background-color: #81D4FA;
+ 	margin-top: 15px;
+ 	opacity: 0.9;
+ 	font-size: 20px;
+ 	padding-top: 15px;
+ 	padding-bottom: 15px;
+ 	border-radius: 5px;
+}
+
+.container-fluid {
+	padding-left: 0px;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #333;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a .fa-home {
+	color: #333;
+}
+
+a .fa-home:hover {
+	color: #7F7F7F;
+}
+
+.fa-download {
+	color: #333;
+	float: right;
+}
+
+.fa-download:hover {
+	color: #7F7F7F;
+}
+
+button {
+	border-radius: 5px;
+}
+
+.fa-home {
+	float: right;
+	font-size: 22px;
+	padding-right: 20px;
+}
+
+.navbar {
+	border-radius: 0px;
+	min-height: 5px;
+	padding: 5px 0px 5px 15px;
+	margin-bottom: 0px;
+}

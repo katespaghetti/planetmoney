@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+	<title>Planet Money Music</title>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='planetmoney.css' rel='stylesheet' type='text/css'>
+	
+	<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script language="javascript" type="text/javascript" src="myJsonData.js"></script>
+	<script language="javascript" type="text/javascript" src="timeUpdated.js"></script>
+	<script language="javascript" type="text/javascript" src="planetmoney.js"></script>
+</head>
+
+<body>
+	<nav class="navbar navbar-default"><span class="updated-time-container"></span><a href="http://katefilippova.com/index.html"><i class="fa fa-home"></i></a></nav>
+	<div class="container-fluid specific">
+		<div class="col-xs-9 table-responsive">
+			<table class="table" id="musicTable">
+			    <thead>
+			        <tr>
+			            <th>Planet Money Music <i class="fa fa-download" title="Download this table! (not currently available)"></i></th>
+			        </tr>
+			    </thead>
+			    <tbody> 	
+			  	</tbody>	
+			</table>
+		</div>
+		<div class="col-xs-3 description-container">
+			<a href="http://www.npr.org/sections/money/" target="_blank">Planet Money</a> is a podcast/blog/NPR program about the economy. The table to the left is an up to date list of all the episodes and music played in them as listed in  <a href="http://www.npr.org/api/inputReference.php" target="_blank">NPR's API.</a> Check out <a href="https://github.com/katespaghetti/planetmoney" target="_blank">my Github repo</a> to grab the code to get this list for yourself. <strike>If you just want to download the table in CSV format, click the download button at the top left corner of the table.</strike> Currently working on making a nicely formatted CSV file, stay tuned!
+			<br><br>
+			My (very) long-term goal for this data is to make a pie chart with genre breakdowns.
+		</div>
+	</div>
+</body>
+</html>
