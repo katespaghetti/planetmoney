@@ -3,6 +3,13 @@ body {
 	font-family: "Josefin Slab";
 }
 
+.navbar {
+	border-radius: 0px;
+	min-height: 5px;
+	padding: 5px 0px 5px 15px;
+	margin-bottom: 0px;
+}
+
 .table {
  	opacity: 0.9;
  	border: 10px solid #FFEB3B;
@@ -17,7 +24,7 @@ body {
  	background-color: #FFEB3B;
 }
 
-.table>thead>tr>th {
+.table thead tr th {
 	border-color: #FFEB3B;
 }
 
@@ -26,16 +33,20 @@ body {
  	border-color: #FFEB3B;
 }
 
-.table>tbody>tr>td {
+.table tbody tr td {
 	border-color: #FFEB3B;
 }
 
-.table>tbody>.number:nth-child(even) {
+.table tbody .number:nth-child(even) {
 	background-color: #FFF9C4;
 }
 
-.table>tbody>.number:nth-child(odd) {
+.table tbody .number:nth-child(odd) {
 	background-color: #FFFDE7;
+}
+
+.main-table-container {
+	padding-left: 0;
 }
 
 .description-container {
@@ -46,10 +57,20 @@ body {
  	padding-top: 15px;
  	padding-bottom: 15px;
  	border-radius: 5px;
+ 	position: fixed;
+ 	right: 15px;
 }
 
-.container-fluid {
-	padding-left: 0px;
+@media (max-width: 767px) {
+	.main-table-container {
+		padding-right: 0;
+	}
+
+	.description-container {
+	 	margin-top: 0px;
+	 	margin-bottom: 15px;
+	 	position: inherit;
+	}
 }
 
 a {
@@ -90,11 +111,4 @@ button {
 	float: right;
 	font-size: 22px;
 	padding-right: 20px;
-}
-
-.navbar {
-	border-radius: 0px;
-	min-height: 5px;
-	padding: 5px 0px 5px 15px;
-	margin-bottom: 0px;
 }
