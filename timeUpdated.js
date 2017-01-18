@@ -1,1 +1,1 @@
-var timeUpdated = "10:14PM on September 08, 2015"
+var timeUpdated = "12:14AM on January 18, 2017"

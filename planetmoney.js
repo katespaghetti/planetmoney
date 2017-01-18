@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	xyz = 0
 	for (i = 0; i < JsonData.length; i++) {
-		console.log(JsonData[i].episodeTitle);
+		// console.log(JsonData[i].episodeTitle);
 		$("tbody").append("<tr class='number " + (xyz++) + "'><td>" + JsonData[i].episodeTitle + "<br>" + (JsonData[i].musicData || "") + "</td></tr>")
 	}
 

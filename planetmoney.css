@@ -1,21 +1,12 @@
 body {
-	background: url(squirrel_v3.png);
+	/*background: url(squirrel_v3.png);*/
 	font-family: "Josefin Slab";
-}
-
-.navbar {
-	border-radius: 0px;
-	min-height: 5px;
-	padding: 5px 0px 5px 15px;
-	margin-bottom: 0px;
 }
 
 .table {
  	opacity: 0.9;
- 	border: 10px solid #FFEB3B;
  	margin-top: 15px;
  	border-collapse: separate;
- 	border-radius: 5px;
 }
 
  thead {
@@ -24,29 +15,21 @@ body {
  	background-color: #FFEB3B;
 }
 
-.table thead tr th {
+.table>thead>tr>th {
 	border-color: #FFEB3B;
+	padding: 10px;
 }
 
  tbody {
  	font-size: 16px;
- 	border-color: #FFEB3B;
 }
 
-.table tbody tr td {
-	border-color: #FFEB3B;
-}
-
-.table tbody .number:nth-child(even) {
+.table>tbody>.number:nth-child(even) {
 	background-color: #FFF9C4;
 }
 
-.table tbody .number:nth-child(odd) {
-	background-color: #FFFDE7;
-}
-
-.main-table-container {
-	padding-left: 0;
+.table>tbody>.number:nth-child(odd) {
+	background-color: #e0dfd0;
 }
 
 .description-container {
@@ -56,21 +39,10 @@ body {
  	font-size: 20px;
  	padding-top: 15px;
  	padding-bottom: 15px;
- 	border-radius: 5px;
- 	position: fixed;
- 	right: 15px;
 }
 
-@media (max-width: 767px) {
-	.main-table-container {
-		padding-right: 0;
-	}
-
-	.description-container {
-	 	margin-top: 0px;
-	 	margin-bottom: 15px;
-	 	position: inherit;
-	}
+.container-fluid {
+	padding-left: 0px;
 }
 
 a {
@@ -86,29 +58,25 @@ a:visited {
 	text-decoration: none;
 }
 
-a .fa-home {
-	color: #333;
-}
-
-a .fa-home:hover {
-	color: #7F7F7F;
-}
-
+a .fa-home,
 .fa-download {
 	color: #333;
 	float: right;
 }
 
+a .fa-home:hover,
 .fa-download:hover {
 	color: #7F7F7F;
 }
 
-button {
-	border-radius: 5px;
-}
-
 .fa-home {
-	float: right;
 	font-size: 22px;
 	padding-right: 20px;
+}
+
+.navbar {
+	border-radius: 0px;
+	min-height: 5px;
+	padding: 5px 0px 5px 15px;
+	margin-bottom: 0px;
 }

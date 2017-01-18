@@ -43,7 +43,7 @@ while jsonOutput["list"].get("story", "") != "":
 	startNum = startNum + 20
 	jsonOutput = makeRequest()
 
-f = open("/Users/kate/desktop/github/website/projects/planet/myJsonData.js","w")
+f = open("/Users/kate/desktop/github/website/planet-money-data/myJsonData.js","w")
 jsOutput = "var JsonData = " + json.dumps(musicArray)
 f.write(jsOutput);
 f.close()
@@ -52,19 +52,19 @@ s3 = boto3.resource("s3")
 for bucket in s3.buckets.all():
     print(bucket.name)
 
-data = open("/Users/kate/desktop/github/website/projects/planet/myJsonData.js", "rb")
-s3.Bucket("katefilippova.com").put_object(Key="projects/planet/myJsonData.js", Body=data)
+data = open("/Users/kate/desktop/github/website/planet-money-data/myJsonData.js", "rb")
+s3.Bucket("trianglecake.com").put_object(Key="planet-money-data/myJsonData.js", Body=data)
 
 timeUpdated = datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
 print(timeUpdated)
 
-f = open("/Users/kate/desktop/github/website/projects/planet/timeUpdated.js","w")
+f = open("/Users/kate/desktop/github/website/planet-money-data/timeUpdated.js","w")
 timeUpdatedOutput = "var timeUpdated = " + '"' + timeUpdated + '"'
 f.write(timeUpdatedOutput);
 f.close()
 
-data = open("/Users/kate/desktop/github/website/projects/planet/timeUpdated.js", "rb")
-s3.Bucket("katefilippova.com").put_object(Key="projects/planet/timeUpdated.js", Body=data)
+data = open("/Users/kate/desktop/github/website/planet-money-data/timeUpdated.js", "rb")
+s3.Bucket("trianglecake.com").put_object(Key="planet-money-data/timeUpdated.js", Body=data)
 	
 
 #Strings targeted with regex:
